@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Portafolio | AlexisTech</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<header class="navbar">
+    <div class="logo">AlexisTech</div>
+</header>
+<!-- NAVBAR -->
+<header class="navbar">
+    <div class="logo">AlexisTech</div>
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="portfolio.html">Portafolio</a></li>
+            <li><a href="acerca.html">About</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="portfolio">
+
+    <!-- INTRO -->
+    <div class="portfolio-intro">
+    <h1>Mis Proyectos</h1>
+    <p>
+        Desarrollo soluciones reales para negocios: sistemas, apps y páginas web modernas.
+    </p>
+   
+</div>
+
+  
+
+    <!-- PROYECTOS -->
+    <div class="portfolio-container">
+
+        <!-- PROYECTO 1 -->
+        <div class="project-card">
+            <div class="project-image">
+                <img src="assets/images/gim1.png" class="active">
+                <img src="assets/images/gimnasio2.png">
+                <img src="assets/images/gimnasio3.png">
+
+                <div class="overlay">
+                    <button class="open-modal"
+                        data-title="Sistema de Gimnasio"
+                        data-desc="Gestión de clientes, pagos y asistencia."
+                        data-tech="C# - SQL"
+                        data-images="assets/images/gim1.png,assets/images/gimnasio2.png,assets/images/gimnasio3.png">
+                        Ver proyecto
+                    </button>
+                </div>
+
+                <button class="prev">‹</button>
+                <button class="next">›</button>
+            </div>
+
+            <div class="project-info">
+                <h3>Sistema de Gimnasio</h3>
+                <p>Control completo de clientes y pagos.</p>
+                <div class="tags">
+                    <span>C#</span>
+                    <span>SQL</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- PROYECTO 2 -->
+        <div class="project-card">
+            <div class="project-image">
+                <img src="assets/images/bar.png" class="active">
+                <img src="assets/images/bar2.png">
+                <img src="assets/images/bar3.png">
+
+                <div class="overlay">
+                    <button class="open-modal"
+                        data-title="Bar Pool"
+                        data-desc="Control de mesas, tiempos y consumos."
+                        data-tech="C# - SQL"
+                        data-images="assets/images/bar.png,assets/images/bar2.png,assets/images/bar3.png">
+                        Ver proyecto
+                    </button>
+                </div>
+
+                <button class="prev">‹</button>
+                <button class="next">›</button>
+            </div>
+
+            <div class="project-info">
+                <h3>Bar Pool</h3>
+                <p>Gestión de mesas en tiempo real.</p>
+                <div class="tags">
+                    <span>C#</span>
+                    <span>SQL</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- PROYECTO 3 -->
+        <div class="project-card">
+            <div class="project-image">
+                <img src="assets/images/pc1.jpg" class="active">
+                <img src="assets/images/pc2.jpg">
+                <img src="assets/images/pc3.jpg">
+
+                <div class="overlay">
+                    <button class="open-modal"
+                        data-title="Mantenimiento de PC"
+                        data-desc="Optimización y limpieza para mejor rendimiento."
+                        data-tech="Hardware - Software"
+                        data-images="assets/images/pc1.jpg,assets/images/pc2.jpg,assets/images/pc3.jpg">
+                        Ver proyecto
+                    </button>
+                </div>
+
+                <button class="prev">‹</button>
+                <button class="next">›</button>
+            </div>
+
+            <div class="project-info">
+                <h3>Mantenimiento PC</h3>
+                <p>Mejora de rendimiento y limpieza.</p>
+                <div class="tags">
+                    <span>Hardware</span>
+                    <span>Software</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- PROYECTO 4 -->
+        <div class="project-card">
+            <div class="project-image">
+                <img src="assets/images/pag1.png" class="active">
+                <img src="assets/images/pag2.png">
+                <img src="assets/images/pag3.png">
+
+                <div class="overlay">
+                    <button class="open-modal"
+                        data-title="Página Web"
+                        data-desc="Diseño web moderno y personalizado."
+                        data-tech="HTML - CSS - JS"
+                        data-images="assets/images/pag1.png,assets/images/pag2.png,assets/images/pag3.png">
+                        Ver proyecto
+                    </button>
+                </div>
+
+                <button class="prev">‹</button>
+                <button class="next">›</button>
+            </div>
+
+            <div class="project-info">
+                <h3>Página Web</h3>
+                <p>Desarrollo web profesional.</p>
+                <div class="tags">
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>JS</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- CTA FINAL -->
+    <div class="cta">
+        <h2>¿Tenés un proyecto en mente?</h2>
+        <p>Podemos hacerlo realidad juntos.</p>
+        <a href="https://api.whatsapp.com/send/?phone=1127068030" class="btn">Contactar por WhatsApp</a>
+    </div>
+
+</section>
+
+<!-- MODAL -->
+<div id="modal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+
+        <h2 id="modal-title"></h2>
+        <p id="modal-desc"></p>
+        <p id="modal-tech"></p>
+
+        <div class="modal-slider">
+            <img id="modal-img" src="">
+        </div>
+
+        <button id="modal-prev">‹</button>
+        <button id="modal-next">›</button>
+    </div>
+</div>
+
+<script src="js/app.js"></script>
+</body>
+</html>
