@@ -1,0 +1,14 @@
+{
+  "items": [
+    {
+      "nombre": "Desarrollo Web",
+      "descripcion": "Páginas modernas y rápidas",
+      "precio": "$100"
+    },
+    {
+      "nombre": "Reparación PC",
+      "descripcion": "Mantenimiento y optimización",
+      "precio": "$50"
+    }
+  ]
+}
