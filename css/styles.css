@@ -257,9 +257,9 @@ body {
 /* CTA */
 .cta {
     text-align: center;
-    padding: 40px;
+    padding: 30px;
     background: rgba(59,130,246,0.08);
-    border-radius: 10px;
+    border-radius: 8px;
     max-width: 600px;
     margin: auto;
 }
