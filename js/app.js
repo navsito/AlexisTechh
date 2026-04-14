@@ -81,7 +81,7 @@ document.addEventListener("DOMContentLoaded", () => {
     };
 
 });
-fetch("content/servicios.json")
+fetch("content/blog/servicios.json")
   .then(res => res.json())
   .then(data => {
     let container = document.getElementById("servicios");
