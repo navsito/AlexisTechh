@@ -86,12 +86,23 @@ if (closeBtn && modal) {
 }
 });
 
-function toggleMenu() {
-  document.getElementById("menu").classList.toggle("active");
-}
-
 document.querySelectorAll("#menu a").forEach(link => {
   link.addEventListener("click", () => {
     document.getElementById("menu").classList.remove("active");
   });
+});
+document.addEventListener("DOMContentLoaded", () => {
+
+    // =========================
+    // 🔥 NAVBAR HAMBURGUESA
+    // =========================
+    const btn = document.getElementById("hamburguesa");
+    const menu = document.getElementById("menu");
+
+    if (btn && menu) {
+        btn.addEventListener("click", () => {
+            menu.classList.toggle("active");
+        });
+    }
+
 });
