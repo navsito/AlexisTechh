@@ -81,21 +81,7 @@ document.addEventListener("DOMContentLoaded", () => {
     };
 
 });
-fetch("content/blog/servicios.json")
-  .then(res => res.json())
-  .then(data => {
-    let container = document.getElementById("servicios");
 
-    data.items.forEach(servicio => {
-      container.innerHTML += `
-        <div class="card">
-          <h3>${servicio.nombre}</h3>
-          <p>${servicio.descripcion}</p>
-          <strong>${servicio.precio}</strong>
-        </div>
-      `;
-    });
-  });
 function toggleMenu() {
   document.getElementById("menu").classList.toggle("active");
 }
