@@ -8,15 +8,16 @@ body {
 
 /* NAVBAR */
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    padding: 20px 30px;
-    position: fixed;
-    width: 98%;
-    top: 0;
-    background: rgba(2, 6, 23, 0.7);
-    backdrop-filter: blur(10px);
-    z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 25px;
+  position: fixed;
+  width: 100%; /* 👈 CAMBIAR */
+  top: 0;
+  background: rgba(2, 6, 23, 0.7);
+  backdrop-filter: blur(10px);
+  z-index: 1000;
 }
 
 .navbar ul {
@@ -872,12 +873,7 @@ h2 {
 .whatsapp:hover {
     box-shadow: 0 0 20px #25D366;
 }
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px;
-}
+
 
 nav ul {
   display: flex;
@@ -899,12 +895,17 @@ nav ul {
     display: none;
     flex-direction: column;
     position: absolute;
-    top: 60px;
-    right: 0;
+    top: 70px;
+    left: 0; /* 👈 mejor que right */
     width: 100%;
     background: #0a0f2c;
-    padding: 20px;
+    padding: 20px 0;
     text-align: center;
+    border-top: 1px solid rgba(255,255,255,0.1);
+  }
+
+  nav ul li {
+    margin: 12px 0;
   }
 
   nav ul.active {
@@ -914,4 +915,11 @@ nav ul {
   .hamburguesa {
     display: block;
   }
+}
+nav a {
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #3b82f6;
 }
