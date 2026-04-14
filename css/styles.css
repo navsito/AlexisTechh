@@ -7,34 +7,52 @@ body {
 }
 
 /* NAVBAR */
+
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 15px 25px;
   position: fixed;
-  width: 100%; /* 👈 CAMBIAR */
+  width: 100%;
+  box-sizing: border-box; /* 🔥 clave */
   top: 0;
   background: rgba(2, 6, 23, 0.7);
   backdrop-filter: blur(10px);
   z-index: 1000;
 }
 
-.navbar ul {
-    display: flex;
-    list-style: none;
-    gap: 25px;
+.logo {
+  font-weight: bold;
+  font-size: 18px;
 }
 
+/* menú desktop */
+.navbar ul {
+  display: flex;
+  list-style: none;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
+}
 
+/* links */
 .navbar a {
-    color: white;
-    text-decoration: none;
+  color: white;
+  text-decoration: none;
+  transition: 0.3s;
 }
 
 .navbar a:hover {
-    color: #3b82f6;
+  color: #3b82f6;
 }
+/* hamburguesa */
+.hamburguesa {
+  display: none;
+  font-size: 26px;
+  cursor: pointer;
+}
+
 .btn-outline {
     border: 2px solid #3b82f6;
     padding: 12px 25px;
@@ -672,11 +690,13 @@ h2 {
 }
 
 .blog-hero h1 {
-    font-size: 2.8rem;
-    margin-bottom: 10px;
-    background: linear-gradient(90deg, #3b82f6, #60a5fa);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+background: linear-gradient(90deg, #3b82f6, #60a5fa);
+
+background-clip: text;              /* estándar */
+-webkit-background-clip: text;     /* chrome/safari */
+
+color: transparent;
+-webkit-text-fill-color: transparent;
 }
 
 .blog-hero p {
@@ -875,28 +895,17 @@ h2 {
 }
 
 
-nav ul {
-  display: flex;
-  gap: 20px;
-  list-style: none;
-}
 
-/* Botón hamburguesa */
-.hamburguesa {
-  display: none;
-  font-size: 25px;
-  cursor: pointer;
-}
 
 /* 📱 MOBILE */
 @media (max-width: 768px) {
 
-  nav ul {
+  .navbar ul {
     display: none;
     flex-direction: column;
     position: absolute;
     top: 70px;
-    left: 0; /* 👈 mejor que right */
+    left: 0;
     width: 100%;
     background: #0a0f2c;
     padding: 20px 0;
@@ -904,22 +913,26 @@ nav ul {
     border-top: 1px solid rgba(255,255,255,0.1);
   }
 
-  nav ul li {
+  .navbar ul.active {
+    display: flex;
+  }
+
+  .navbar ul li {
     margin: 12px 0;
   }
 
-  nav ul.active {
-    display: flex;
+  .navbar ul li a {
+    font-size: 18px;
+    display: block;
+    padding: 10px;
+  }
+
+  .navbar ul li a:hover {
+    background: rgba(59,130,246,0.1);
+    border-radius: 6px;
   }
 
   .hamburguesa {
     display: block;
   }
-}
-nav a {
-  transition: 0.3s;
-}
-
-nav a:hover {
-  color: #3b82f6;
 }
