@@ -64,6 +64,8 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
+if (next && prev && img && images) {
+
     next.onclick = () => {
         index = (index + 1) % images.length;
         img.src = images[index];
@@ -73,13 +75,15 @@ document.addEventListener("DOMContentLoaded", () => {
         index = (index - 1 + images.length) % images.length;
         img.src = images[index];
     };
+}
 
+if (closeBtn && modal) {
     closeBtn.onclick = () => modal.style.display = "none";
 
     window.onclick = (e) => {
         if (e.target === modal) modal.style.display = "none";
     };
-
+}
 });
 
 function toggleMenu() {
