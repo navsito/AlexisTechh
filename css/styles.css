@@ -872,3 +872,43 @@ h2 {
 .whatsapp:hover {
     box-shadow: 0 0 20px #25D366;
 }
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap; /* 👈 ESTO ES CLAVE */
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+}
+
+/* Menú */
+nav ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap; /* 👈 CLAVE */
+}
+
+/* Links */
+nav a {
+  text-decoration: none;
+  color: white;
+}
+
+/* 📱 Celular */
+@media (max-width: 768px) {
+  nav ul {
+    justify-content: center;
+  }
+}
