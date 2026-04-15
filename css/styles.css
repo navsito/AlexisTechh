@@ -684,10 +684,7 @@ h2 {
 }
 /* ================= BLOG HERO ================= */
 
-.blog-hero {
-    padding: 140px 20px 60px;
-    text-align: center;
-}
+
 
 .blog-hero h1 {
 background: linear-gradient(90deg, #3b82f6, #60a5fa);
@@ -801,23 +798,22 @@ color: transparent;
 /* 👻 TEXTO FANTASMA */
 
 .blog-hero {
+    padding: 80px 20px 20px; /* 👈 antes era mucho más */
     position: relative;
+    text-align: center;
     overflow: hidden;
 }
 
 .ghost-text {
     position: absolute;
-    font-size: 40px;
-    font-weight: bold;
-    color: rgba(255,255,255,0.03);
-    top: 14%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    pointer-events: none;
+    font-size: 26px;
+    color: rgba(255,255,255,0.03);
     white-space: nowrap;
-}
-.ghost-text {
-    animation: float 2s ease-in-out infinite;
+    pointer-events: none;
+    letter-spacing: 1px;
 }
 
 @keyframes float {
