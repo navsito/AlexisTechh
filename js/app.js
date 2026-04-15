@@ -1,6 +1,25 @@
 document.addEventListener("DOMContentLoaded", () => {
 
     // =========================
+    // 🔥 NAVBAR HAMBURGUESA
+    // =========================
+    const btn = document.getElementById("hamburguesa");
+    const menu = document.getElementById("menu");
+
+    if (btn && menu) {
+        btn.addEventListener("click", () => {
+            menu.classList.toggle("active");
+        });
+
+        // cerrar menú al hacer click
+        document.querySelectorAll("#menu a").forEach(link => {
+            link.addEventListener("click", () => {
+                menu.classList.remove("active");
+            });
+        });
+    }
+
+    // =========================
     // 🔥 CARRUSEL EN CARDS
     // =========================
     document.querySelectorAll(".project-image").forEach(slider => {
@@ -18,7 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         if (nextBtn && prevBtn) {
             nextBtn.addEventListener("click", (e) => {
-                e.stopPropagation(); // 🔥 evita conflicto con modal
+                e.stopPropagation();
                 index = (index + 1) % images.length;
                 showImage(index);
             });
@@ -32,7 +51,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     // =========================
-    // 🔥 MODAL CON IMÁGENES
+    // 🔥 MODAL
     // =========================
     const modal = document.getElementById("modal");
     const title = document.getElementById("modal-title");
@@ -42,7 +61,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const prev = document.getElementById("modal-prev");
     const next = document.getElementById("modal-next");
-
     const closeBtn = document.querySelector(".close");
 
     let images = [];
@@ -50,6 +68,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     document.querySelectorAll(".open-modal").forEach(btn => {
         btn.addEventListener("click", () => {
+
+            if (!modal) return;
 
             title.textContent = btn.dataset.title;
             desc.textContent = btn.dataset.desc;
@@ -64,45 +84,25 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-if (next && prev && img && images) {
+    if (next && prev && img) {
 
-    next.onclick = () => {
-        index = (index + 1) % images.length;
-        img.src = images[index];
-    };
+        next.onclick = () => {
+            index = (index + 1) % images.length;
+            img.src = images[index];
+        };
 
-    prev.onclick = () => {
-        index = (index - 1 + images.length) % images.length;
-        img.src = images[index];
-    };
-}
+        prev.onclick = () => {
+            index = (index - 1 + images.length) % images.length;
+            img.src = images[index];
+        };
+    }
 
-if (closeBtn && modal) {
-    closeBtn.onclick = () => modal.style.display = "none";
+    if (closeBtn && modal) {
+        closeBtn.onclick = () => modal.style.display = "none";
 
-    window.onclick = (e) => {
-        if (e.target === modal) modal.style.display = "none";
-    };
-}
-});
-
-document.querySelectorAll("#menu a").forEach(link => {
-  link.addEventListener("click", () => {
-    document.getElementById("menu").classList.remove("active");
-  });
-});
-document.addEventListener("DOMContentLoaded", () => {
-
-    // =========================
-    // 🔥 NAVBAR HAMBURGUESA
-    // =========================
-    const btn = document.getElementById("hamburguesa");
-    const menu = document.getElementById("menu");
-
-    if (btn && menu) {
-        btn.addEventListener("click", () => {
-            menu.classList.toggle("active");
-        });
+        window.onclick = (e) => {
+            if (e.target === modal) modal.style.display = "none";
+        };
     }
 
 });
