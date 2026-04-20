@@ -266,6 +266,13 @@ body {
     gap: 10px;
     flex-wrap: wrap;
 }
+.tagss {
+    
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
 
 .tags span {
     background: #3b82f6;
