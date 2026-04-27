@@ -1056,9 +1056,8 @@ color: transparent;
 }
 .logo {
   height: 60px;
-  background: #000;
-  padding: 5px;
-  border-radius: 6px;
+  background: transparent;
+  mix-blend-mode: lighten;
 }
 
 .logo-container {
