@@ -1054,3 +1054,12 @@ color: transparent;
     max-width: 320px;
   }
 }
+.logo {
+  height: 45px;
+  width: auto;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
