@@ -1054,10 +1054,12 @@ color: transparent;
     max-width: 320px;
   }
 }
+/* logo transparente*/
 .logo {
   height: 90px;
   background: transparent;
   mix-blend-mode: lighten;
+   filter: brightness(1.2);
 }
 
 .logo-container {
